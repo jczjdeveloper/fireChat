@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
@@ -11,5 +12,8 @@ import registerServiceWorker from './registerServiceWorker';
 import App from './Components/App/App';
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+), document.getElementById('root'))
