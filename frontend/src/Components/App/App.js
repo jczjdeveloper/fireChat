@@ -10,6 +10,7 @@ import './App.css';
 import LandingPage from '../LandingPage/LandingPage';
 import Login from '../Login/Login';
 import Signup from '../Signup/Signup';
+import Chat from '../Chat/Chat';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path='/' component={LandingPage}/>
           <Route path='/login' component={Login}/>
           <Route path='/signup' component={Signup}/>
+          <Route path='/chat' component={Chat}/>
         </Switch>
       </MuiThemeProvider>
     );
