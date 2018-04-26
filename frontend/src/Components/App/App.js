@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import React, {Component} from 'react';
+import {Switch, Route} from 'react-router-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // TO REMOVE LATER!
 import logo from '../../logo.svg';
@@ -13,11 +14,13 @@ import Signup from '../Signup/Signup';
 class App extends Component {
   render() {
     return (
-      <Switch>
-        <Route exact path='/' component={LandingPage}/>
-        <Route path='/login' component={Login}/>
-        <Route path='/signup' component={Signup}/>
-      </Switch>
+      <MuiThemeProvider>
+        <Switch>
+          <Route exact path='/' component={LandingPage}/>
+          <Route path='/login' component={Login}/>
+          <Route path='/signup' component={Signup}/>
+        </Switch>
+      </MuiThemeProvider>
     );
   }
 }
